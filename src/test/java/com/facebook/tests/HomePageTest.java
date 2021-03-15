@@ -2,10 +2,12 @@ package com.facebook.tests;
 
 import com.facebook.base.TestBase;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
+@Listeners(reports.ExtentListener.class)
 public class HomePageTest extends TestBase {
     LoginPage loginPage = new LoginPage();
     HomePage homePage  = new HomePage();
